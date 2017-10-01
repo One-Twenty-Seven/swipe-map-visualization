@@ -1,87 +1,11 @@
 <html>
 <body>
 
-<style media="screen">
-    .container {
-        padding: 100px;
-        padding-top: 0;
-        position: relative;
-        max-width: 60%;
-    }
-
-    svg {
-        margin-bottom: 50px;
-        display: table;
-        margin: 0 auto;
-    }
-
-    circle {
-        opacity: 0.5;
-        fill: red;
-        transition: r 3s ease;
-    }
-
-    circle:hover {
-        fill: skyblue;
-        cursor: pointer;
-    }
-
-    /* Slider */
-    section.range-slider {
-        position: relative;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        margin: 30px 0;
-    }
-
-    section.range-slider input {
-        pointer-events: none;
-        position: absolute;
-        overflow: hidden;
-        left: 0;
-        top: 15px;
-        width: 100%;
-        outline: none;
-        height: 18px;
-        margin: 0;
-        padding: 0;
-    }
-
-    section.range-slider input::-webkit-slider-thumb {
-        pointer-events: all;
-        position: relative;
-        z-index: 1;
-        outline: 0;
-    }
-
-    section.range-slider input::-moz-range-thumb {
-        pointer-events: all;
-        position: relative;
-        z-index: 10;
-        -moz-appearance: none;
-        width: 9px;
-    }
-
-    section.range-slider input::-moz-range-track {
-        position: relative;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 1);
-        border: 0;
-    }
-    section.range-slider input:last-of-type::-moz-range-track {
-        -moz-appearance: none;
-        background: none transparent;
-        border: 0;
-    }
-      section.range-slider input[type=range]::-moz-focus-outer {
-      border: 0;
-    }
-</style>
+<link rel="stylesheet" href="styles.css">
 
 <div class="container">
     <?xml version="1.0" encoding="UTF-8"?>
-    <svg width="100%" viewBox="-100 -50 1200 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg id="campus-map-svg" width="100%" viewBox="-100 -50 1200 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="denison-map">
                 <g id="Buildings" transform="translate(506.200000, 390.000000) scale(-1, 1) rotate(-180.000000) translate(-506.200000, -390.000000) translate(0.700000, 0.000000)" fill-rule="nonzero" fill="#000000">
@@ -266,11 +190,17 @@
 
     <section class="range-slider">
       <span class="rangeValues"></span>
-      <input value="1491102173" min="1491102173" max="1491796026" step="60" type="range">
-      <input value="1491796026" min="1491102173" max="1491796026" step="60" type="range">
+      <input onmouseup="buttonPress()" value="1491102173" min="1491102173" max="1491796026" step="60" type="range">
+      <input onmouseup="buttonPress()" value="1491796026" min="1491102173" max="1491796026" step="60" type="range">
     </section>
 
-    <button onclick="buttonPress()" type="button" name="button">Make Things Happen</button>
+    <ul class="readjust-svg-group">
+        <li data-view="-100 -50 1200 850" onclick="readjustViewbox(this)" class="readjust-svg">All Campus</li>
+        <li data-view="0 -100 600 425" onclick="readjustViewbox(this)" class="readjust-svg">North Quad</li>
+        <li data-view="-130 50 600 425" onclick="readjustViewbox(this)" class="readjust-svg">West Quad</li>
+        <li data-view="600 200 600 425" onclick="readjustViewbox(this)" class="readjust-svg">East Quad</li>
+        <li data-view="150 450 600 425" onclick="readjustViewbox(this)" class="readjust-svg">South Quad</li>
+    </ul>
 </div>
 
 </body>

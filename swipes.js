@@ -20,8 +20,6 @@ function buttonPress() {
         swipedatacopy.shift();
     }
 
-    console.log(swipedatacopy[0]["time"]);
-
     for ( var i=slide1; i<=slide2; i++ ) {
         if (swipedatacopy[0]["time"] === i) {
             var elem = document.getElementById(swipedatacopy[0]["location"]);
@@ -36,8 +34,11 @@ function buttonPress() {
     }
 }
 
-/* SLIDER */
+function readjustViewbox(e) {
+    document.getElementById("campus-map-svg").setAttribute("viewBox", e.getAttribute("data-view"));
+}
 
+/* SLIDER */
 var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 function getVals() {
@@ -72,6 +73,7 @@ window.onload = function(){
                 sliders[y].oninput = getVals;
                 // Manually trigger event first time to display values
                 sliders[y].oninput();
+                buttonPress();
             }
         }
     }
