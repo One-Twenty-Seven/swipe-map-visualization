@@ -16,13 +16,18 @@ function buttonPress() {
         slide1 = tmp;
     }
 
-    while ( slide1 > swipedatacopy[0]["time"] && swipedatacopy.length !== 0 ) {
+    while ( slide1 > swipedatacopy[0]["t"] && swipedatacopy.length !== 0 ) {
         swipedatacopy.shift();
     }
 
     for ( var i=slide1; i<=slide2; i++ ) {
-        if (swipedatacopy[0]["time"] === i) {
-            var elem = document.getElementById(swipedatacopy[0]["location"]);
+        if (swipedatacopy[0]["t"] === i) {
+            if (swipedatacopy[0]["v"] === 1) { // check if valid
+                var elem = document.querySelectorAll("circle#" + swipedatacopy[0]["l"])[1];
+            }
+            else {  // otherwise invalid/denied
+                var elem = document.querySelectorAll("circle#" + swipedatacopy[0]["l"])[0];
+            }
             if (elem) {
                 elem.setAttribute("r", parseFloat(elem.getAttribute("r")) + 0.025);
             }
@@ -36,6 +41,10 @@ function buttonPress() {
 
 function readjustViewbox(e) {
     document.getElementById("campus-map-svg").setAttribute("viewBox", e.getAttribute("data-view"));
+}
+
+function showTooltip(e) {
+    console.log(document.querySelectorAll("#" + e.id)); // 0 is valid, 1 is denied
 }
 
 /* SLIDER */
