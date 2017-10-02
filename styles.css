@@ -1,3 +1,20 @@
+.js-tooltip {
+    position: absolute;
+    top:30px;
+    left: 100px;
+    background-color: white;
+    padding: 0.5em 1em;
+    font-size: 0.75em;
+    line-height: 1.5;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #888888;
+}
+
+.js-tooltip:hover {
+    cursor: pointer;
+}
+
 .container {
     padding: 100px;
     padding-top: 0;
@@ -35,6 +52,7 @@ ul.readjust-svg-group li.readjust-svg {
     display: inline-flex;
     flex: 1;
     border: 1px solid black;
+    margin: 0.25em 0;
 }
 
 ul.readjust-svg-group li.readjust-svg:hover {

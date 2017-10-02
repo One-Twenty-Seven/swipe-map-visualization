@@ -39,18 +39,45 @@ function buttonPress() {
     }
 }
 
+function hideTooltip() {
+    document.getElementById("js-tooltip-attach").style.display = "none";
+}
+
 function readjustViewbox(e) {
+    hideTooltip();
     document.getElementById("campus-map-svg").setAttribute("viewBox", e.getAttribute("data-view"));
 }
 
 function showTooltip(e) {
-    console.log(document.querySelectorAll("#" + e.id)); // 0 is valid, 1 is denied
+    var reference = document.querySelectorAll("#" + e.id); // 0 is valid, 1 is denied
+    var deniedCount = reference[0].getAttribute("r") / 0.025;
+    var swipeCount = reference[1].getAttribute("r") / 0.025;
+    var bounds = e.getBoundingClientRect();
+    var elem = document.getElementById("js-tooltip-attach");
+    elem.childNodes[3].innerText = reference[1].getAttribute("data-name"); // building name
+    var swipes = elem.childNodes[8];
+    var denied = elem.childNodes[13];
+    swipes.innerText = Math.round(swipeCount);
+    denied.innerText = Math.round(deniedCount);
+    elem.style.top = bounds.y + (bounds.height / 2);
+    elem.style.left = bounds.x + (bounds.width / 2);
+    elem.style.display = "block";
+}
+
+function twelvetime(time) {
+    var hours = (time.getHours() > 12 ? time.getHours() - 12 : time.getHours()) === 0 ? 12 : (time.getHours() > 12 ? time.getHours() - 12 : time.getHours());
+    var am_pm = time.getHours() >= 12 ? "PM" : "AM";
+    hours = hours < 10 ? "0" + hours : hours;
+    var minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
+
+    return hours + ":" + minutes + am_pm;
 }
 
 /* SLIDER */
 var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 function getVals() {
+    hideTooltip();
     // Get slider values
     var parent = this.parentNode;
     var slides = parent.getElementsByTagName("input");
@@ -69,7 +96,7 @@ function getVals() {
     var d2 = new Date(0);
     d1.setUTCSeconds(slide1);
     d2.setUTCSeconds(slide2);
-    displayElement.innerHTML = weekday[d1.getDay()] + " at " + d1.getHours() + ":" + ('0' + d1.getMinutes()).slice(-2) + " - " + weekday[d2.getDay()] + " at " + d2.getHours() + ":" + ('0' + d2.getMinutes()).slice(-2);
+    displayElement.innerHTML = weekday[d1.getDay()] + " at " + twelvetime(d1) + " - " + weekday[d2.getDay()] + " at " + twelvetime(d2);
 }
 
 window.onload = function(){
