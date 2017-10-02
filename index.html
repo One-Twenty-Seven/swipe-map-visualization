@@ -513,9 +513,9 @@
             var denied = elem.childNodes[13];
             swipes.innerText = Math.round(swipeCount);
             denied.innerText = Math.round(deniedCount);
-            elem.style.top = bounds.y + (bounds.height / 2);
-            elem.style.left = bounds.x + (bounds.width / 2);
             elem.style.display = "block";
+            elem.style.top = (bounds.y + (bounds.height / 2)) + "px";
+            elem.style.left = (bounds.x + (bounds.width / 2)) + "px";
         }
 
         function twelvetime(time) {
