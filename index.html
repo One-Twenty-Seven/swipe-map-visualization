@@ -16,11 +16,26 @@
             position: absolute;
             background-color: white;
             padding: 0.5em 1em;
+            padding-left: 2.5em;
             font-size: 0.75em;
             line-height: 1.5;
             display: none;
             border-radius: 10px;
             box-shadow: 0px 0px 5px #888888;
+        }
+
+        .js-tooltip:before {
+            content: "✚";
+            font-size: 1.3em;
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            transform: rotate(45deg);
+            transition: color 0.2s ease;
+        }
+
+        .js-tooltip:hover:before {
+            color: red;
         }
 
         .js-tooltip:hover {
@@ -81,9 +96,10 @@
             top: 15px;
             -webkit-appearance: none;
             width: 100%;
-            height: 25px;
+            height: 10px;
             border-radius: 5px;
             background: #d7dcdf;
+            border: 1px solid #333333;
             outline: none;
             padding: 0;
             margin: 20px;
@@ -93,7 +109,7 @@
             position: relative;
             -webkit-appearance: none;
             appearance: none;
-            width: 20px;
+            width: 15px;
             height: 30px;
             border-radius: 20%;
             background: #000;
@@ -104,8 +120,8 @@
             z-index: 1;
         }
 
-        section.range-slider input::-webkit-slider-thumb:hover {
-            box-shadow: 0px 0px 5px #888888;
+        section.range-slider input::-webkit-slider-thumb:active {
+            box-shadow: 0px 0px 10px #444444;
         }
 
         section.range-slider input::-moz-range-thumb {
@@ -320,6 +336,7 @@
                             <circle onclick="showTooltip(this)" data-name="Brown Front Door" id="sunset-b-front" cx="23.5" cy="105.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Good Rear Door" id="sunset-d-rear" cx="77.5" cy="78.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Good Front Door" id="sunset-d-front" cx="59.5" cy="89.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Myers Front Door" id="sunset-c-front" cx="82.5" cy="133.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Myers Rear Door" id="sunset-c-rear" cx="94.5" cy="118.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Hayes Door" id="hayes" cx="144.5" cy="135.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Wright Door" id="wright" cx="139.5" cy="154.5" r="0"></circle>
@@ -345,7 +362,6 @@
                             <circle onclick="showTooltip(this)" data-name="Beta Theta Pi Lodge Door" id="beta-frat" cx="483.5" cy="82.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Kappa Sigma Lodge Door" id="kappa-sig-frat" cx="578.5" cy="23.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" id="preston-rear" cx="310.5" cy="72.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" data-name="Myers Front Door" id="sunset-c-front" cx="82.5" cy="133.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Pratt Front Door" id="sunset-a-front" cx="46.5" cy="151.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Sunset House Rear Door" id="sunset-rear" cx="77.5" cy="171.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Sunset House Front Door" id="sunset-front" cx="85.5" cy="196.5" r="0"></circle>
@@ -431,8 +447,8 @@
 
             <section class="range-slider">
               <span class="rangeValues"></span>
-              <input onmouseup="buttonPress()" value="1491177601" min="1491177601" max="1491782385" step="60" type="range">
-              <input onmouseup="buttonPress()" value="1491782385" min="1491177601" max="1491782385" step="60" type="range">
+              <input onmouseup="buttonPress()" value="1491277601" min="1491177601" max="1491782385" step="60" type="range">
+              <input onmouseup="buttonPress()" value="1491682385" min="1491177601" max="1491782385" step="60" type="range">
             </section>
 
             <ul class="readjust-svg-group">
