@@ -16,18 +16,25 @@
         }
 
         .container {
+            box-sizing: border-box;
             color: #6a6c6e;
-            padding: 0 25px;
+            padding: 0 100px;
             position: absolute;
-            width: 50%;
+            width: 100%;
             left: 50%;
             transform: translateX(-50%);
             font-family: sans-serif;
         }
 
+        @media (min-width: 1200px) {
+            .container {
+                padding: 0 200px;
+            }
+        }
+
         @media (max-width: 740px) {
             .container {
-                width: 90%;
+                padding: 0 25px;
             }
         }
 
