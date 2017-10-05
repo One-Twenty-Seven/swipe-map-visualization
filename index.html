@@ -2,12 +2,28 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Data Viz</title>
+        <title>one twenty seven - Interactive Visualization</title>
     </head>
     <style media="screen">
         .container {
-            padding: 50px;
+            color: #6a6c6e;
+            padding: 0 25px;
             position: absolute;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 740px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
         }
 
         .js-tooltip {
@@ -149,6 +165,8 @@
     </style>
     <body>
         <div id="main-container" class="container">
+            <h1 style="font-family: Georgia, serif;">one twenty seven</h1>
+            <p>To use this interactive element, slide the black knobs to the left and right to adjust the time span. The <span style="color: limegreen;">green</span> spots represent valid swipes and the small <span style="color: red;">red</span> spots represent any denied swipes. The buttons at the bottom can be used to zoom into parts of campus. <a href="https://onetwentyseven.blog/2017/10/05/campus-migration-to-the-sunnies-and-well-beyond/">Click here</a> to return to the article.</p>
             <?xml version="1.0" encoding="UTF-8"?>
             <svg id="campus-map-svg" width="100%" viewBox="-100 -50 1200 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
