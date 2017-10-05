@@ -6,10 +6,9 @@
     </head>
     <style media="screen">
         .container {
-            padding: 100px;
-            padding-top: 0;
+            padding: 50px;
             position: relative;
-            max-width: 60%;
+            width: 50%;
         }
 
         .js-tooltip {
@@ -150,7 +149,7 @@
         }
     </style>
     <body>
-        <div class="container">
+        <div id="main-container" class="container">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg id="campus-map-svg" width="100%" viewBox="-100 -50 1200 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -342,69 +341,69 @@
                             <circle onclick="showTooltip(this)" data-name="Wright Door" id="wright" cx="139.5" cy="154.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Lower Elm Door" id="lower-elm" cx="161.5" cy="142.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Upper Elm Door" id="upper-elm" cx="151.5" cy="162.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="sig-chi-west" cx="222.5" cy="191.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="taylor-road" cx="274.5" cy="136.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="taylor-trash" cx="285.5" cy="113.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="preston-front" cx="314.5" cy="96.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="mohutch-front" cx="360.5" cy="75.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="mohutch-rear" cx="335.5" cy="62.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="la-fuerza" cx="355.5" cy="52.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="mohutch-lower-stairwell" cx="370.5" cy="52.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="schaff-front" cx="393.5" cy="27.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Sigma Chi West Door" id="sig-chi-west" cx="222.5" cy="191.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Taylor Main Door" id="taylor-road" cx="274.5" cy="136.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Taylor Trash Door" id="taylor-trash" cx="285.5" cy="113.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Preston Front Door" id="preston-front" cx="314.5" cy="96.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="MoHutch Front Door" id="mohutch-front" cx="360.5" cy="75.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="MoHutch Rear Door" id="mohutch-rear" cx="335.5" cy="62.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="La Fuerza Lodge" id="la-fuerza" cx="355.5" cy="52.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="MoHutch Lower Stairwell Door"  id="mohutch-lower-stairwell" cx="370.5" cy="52.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Schaff Front Door" id="schaff-front" cx="393.5" cy="27.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Delta Chi Lodge Door" id="dchi" cx="391.5" cy="11.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="morrow-front" cx="444.5" cy="16.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Morrow Front Door" id="morrow-front" cx="444.5" cy="16.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Lambda Chi Alpha Lodge Door" id="lambda" cx="451.5" cy="2.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Kappa Sig Front Door" id="kappa-sig-front" cx="559.5" cy="28.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="beta-front" cx="463.5" cy="75.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="chamberlin-east" cx="444.5" cy="113.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="chamberlin-west" cx="410.5" cy="115.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Beta Front Door" id="beta-front" cx="463.5" cy="75.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Chamberlin East Door" id="chamberlin-east" cx="444.5" cy="113.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Chamberlin West Door" id="chamberlin-west" cx="410.5" cy="115.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Beta Side Door" id="Beta-side" cx="470.5" cy="60.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Beta Theta Pi Lodge Door" id="beta-frat" cx="483.5" cy="82.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Kappa Sigma Lodge Door" id="kappa-sig-frat" cx="578.5" cy="23.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="preston-rear" cx="310.5" cy="72.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Preston Rear Door" id="preston-rear" cx="310.5" cy="72.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Pratt Front Door" id="sunset-a-front" cx="46.5" cy="151.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Sunset House Rear Door" id="sunset-rear" cx="77.5" cy="171.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Sunset House Front Door" id="sunset-front" cx="85.5" cy="196.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="shorney-side" cx="19.5" cy="332.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="smith-alley-west" cx="7.5" cy="313.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="smith-front" cx="58.5" cy="310.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Shorney Side Door" id="shorney-side" cx="19.5" cy="332.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Smith BSU Door" id="smith-alley-west" cx="7.5" cy="313.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Smith Front Door" id="smith-front" cx="58.5" cy="310.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Curtis West Front Door" id="curtis-west-front" cx="147.5" cy="313.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Curtis West Rear Door" id="curtis-west-rear" cx="139.5" cy="285.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Curtis East Rear Door" id="curtis-east-rear" cx="178.5" cy="279.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Curtis East Front Door" id="curtis-east-front" cx="173.5" cy="298.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="olin-main" cx="253.5" cy="330.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="olin-dock" cx="252.5" cy="285.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="ebaugh-front" cx="212.5" cy="397.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="barney-front" cx="282.5" cy="512.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="fellows-south" cx="299.5" cy="489.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="fellows-front" cx="282.5" cy="464.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="higley-front" cx="290.5" cy="420.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="slayter-front" cx="360.5" cy="431.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="slayter-commons" cx="365.5" cy="400.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="slayter-connector" cx="390.5" cy="413.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="knapp-front" cx="435.5" cy="434.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="beth-eden-front" cx="529.5" cy="418.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="gilpatrick-main" cx="715.5" cy="439.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="huffman-quad" cx="841.5" cy="491.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="mulberry-front" cx="589.5" cy="557.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="deltagamma" cx="604.5" cy="578.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="cinema-front" cx="552.5" cy="577.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="bryant-north" cx="468.5" cy="587.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="bryant-south" cx="458.5" cy="617.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="bryant-east" cx="513.5" cy="604.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="burke-west" cx="435.5" cy="668.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="burke-south" cx="435.5" cy="693.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="doane-dance-east" cx="410.5" cy="654.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="doane-dance-south" cx="398.5" cy="663.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="burton-music-street" cx="330.5" cy="639.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="king" cx="290.5" cy="668.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="stone-east" cx="294.5" cy="723.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="stone-west" cx="274.5" cy="723.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="open-house-front" cx="592.5" cy="617.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="tridelt" cx="592.5" cy="671.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="ace-morgan-ne" cx="530.5" cy="657.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="ace-morgan-nw" cx="517.5" cy="671.5" r="0"></circle>
-                            <circle onclick="showTooltip(this)" id="huff-elevator" cx="858.5" cy="474.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Olin Main Entrance" id="olin-main" cx="253.5" cy="330.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Olin Loading Dock" id="olin-dock" cx="252.5" cy="285.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Ebaugh Front Door" id="ebaugh-front" cx="212.5" cy="397.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Barney Davis Front Door" id="barney-front" cx="282.5" cy="512.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Fellows South Door" id="fellows-south" cx="299.5" cy="489.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Fellows Front Door" id="fellows-front" cx="282.5" cy="464.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Higley Front Door" id="higley-front" cx="290.5" cy="420.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Slayter Front Door" id="slayter-front" cx="360.5" cy="431.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Slayter Commons Door" id="slayter-commons" cx="365.5" cy="400.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Slayter Connector Door" id="slayter-connector" cx="390.5" cy="413.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Knapp Front Door" id="knapp-front" cx="435.5" cy="434.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Beth Eden Front Door" id="beth-eden-front" cx="529.5" cy="418.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Gilpatrick House Main Door" id="gilpatrick-main" cx="715.5" cy="439.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Huffman Quad Door" id="huffman-quad" cx="841.5" cy="491.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Mulberry House Front Door" id="mulberry-front" cx="589.5" cy="557.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Delta Gamma House" id="deltagamma" cx="604.5" cy="578.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Cinema Front Door" id="cinema-front" cx="552.5" cy="577.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Bryant North Door" id="bryant-north" cx="468.5" cy="587.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Bryant South Door" id="bryant-south" cx="458.5" cy="617.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Burke Hall East Door" id="bryant-east" cx="513.5" cy="604.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Burke Hall West Door" id="burke-west" cx="435.5" cy="668.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Burke Hall South Door" id="burke-south" cx="435.5" cy="693.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Doane Dance East Door" id="doane-dance-east" cx="410.5" cy="654.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Doane Dance South Door" id="doane-dance-south" cx="398.5" cy="663.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Burton Music Building Street Door" id="burton-music-street" cx="330.5" cy="639.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="King Hall" id="king" cx="290.5" cy="668.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Stone Hall East Door" id="stone-east" cx="294.5" cy="723.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Stone Hall West Door" id="stone-west" cx="274.5" cy="723.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Open House Front Door" id="open-house-front" cx="592.5" cy="617.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Delta Delta Delta House" id="tridelt" cx="592.5" cy="671.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Ace Morgan NE Door" id="ace-morgan-ne" cx="530.5" cy="657.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Ace Morgan NW Door" id="ace-morgan-nw" cx="517.5" cy="671.5" r="0"></circle>
+                            <circle onclick="showTooltip(this)" data-name="Huffman Elevator" id="huff-elevator" cx="858.5" cy="474.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Shaw Front Door" id="shaw-front" cx="863.5" cy="437.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Shaw Road Door" id="shaw-road" cx="848.5" cy="428.5" r="0"></circle>
                             <circle onclick="showTooltip(this)" data-name="Beaver Front Door" id="beaver-front" cx="897.5" cy="392.5" r="0"></circle>
@@ -571,6 +570,7 @@
 
         window.onload = function(){
             // Initialize Sliders
+            document.getElementById("main-container").style.opacity = "1";
             var sliderSections = document.getElementsByClassName("range-slider");
             for ( var x = 0; x < sliderSections.length; x++ ) {
                 var sliders = sliderSections[x].getElementsByTagName("input");
