@@ -7,8 +7,7 @@
     <style media="screen">
         .container {
             padding: 50px;
-            position: relative;
-            width: 50%;
+            position: absolute;
         }
 
         .js-tooltip {
@@ -570,7 +569,6 @@
 
         window.onload = function(){
             // Initialize Sliders
-            document.getElementById("main-container").style.opacity = "1";
             var sliderSections = document.getElementsByClassName("range-slider");
             for ( var x = 0; x < sliderSections.length; x++ ) {
                 var sliders = sliderSections[x].getElementsByTagName("input");
