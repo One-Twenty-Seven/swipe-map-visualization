@@ -563,7 +563,7 @@
             swipes.innerText = Math.round(swipeCount);
             denied.innerText = Math.round(deniedCount);
             elem.style.display = "block";
-            elem.style.top = (bounds.y + (bounds.height / 2)) + "px";
+            elem.style.top = ((bounds.y + (bounds.height / 2)) + window.pageYOffset) + "px";
             elem.style.left = (bounds.x + (bounds.width / 2)) + "px";
         }
 
